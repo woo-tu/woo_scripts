@@ -2,7 +2,6 @@
 
 
 import random
-import sys
 
 import pyperclip
 import requests
@@ -25,6 +24,7 @@ new_username = "".join(selection)
 while len(new_username) < 11:
     new_username += str(random.randint(0, 9))
 print(new_username)
-# pyperclip.copy(new_username)
+pyperclip.copy(new_username)
+
 r = requests.get("https://coreyms.com")
 print(r.status_code)
